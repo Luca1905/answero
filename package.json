@@ -1,0 +1,40 @@
+{
+  "name": "answero",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "npm-run-all --parallel dev:frontend dev:backend",
+    "dev:frontend": "next dev --turbo",
+    "dev:backend": "convex dev",
+    "predev": "convex dev --until-success && convex dashboard",
+    "build": "next build --turbo",
+    "start": "next start",
+    "lint": "next lint",
+    "lint:fix": "next lint --fix",
+    "typecheck": "tsc --noEmit",
+    "check": "next lint && tsc --noEmit",
+    "format:write": "prettier --write \"**/*.{ts,tsx,js,jsx,mdx}\" --cache",
+    "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,mdx}\" --cache"
+  },
+  "dependencies": {
+    "@clerk/clerk-react": "^5.25.0",
+    "@clerk/nextjs": "^6.12.6",
+    "convex": "^1.23.0",
+    "next": "15.2.3",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.2.3",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^3.5.3",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
